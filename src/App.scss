@@ -3,17 +3,43 @@
 .app {
   background-color: #111827;
 
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+  }
+
   p,
   a,
+  h1,
   button {
+    margin: 0;
     font-family: "DM Sans", sans-serif;
+    color: #ffffff;
+  }
+  p {
+
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+
+    &.-small {
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 30px;
+    }
   }
 
   a {
     font-size: 14px;
     font-weight: 500;
-    color: #F9FAFB;
     text-decoration: none;
+  }
+
+  h1 {
+    font-size: 58px;
+    font-weight: 700;
+    line-height: 84px;
   }
 
   button {
@@ -29,6 +55,14 @@
       font-weight: 500;
       border-radius: 5px;
     }
+
+    &._secondary {
+      display: flex;
+      align-items: center;
+      font-weight: 500;
+      font-size: 16px;
+      gap: 23px;
+    }
   }
 
   .container {
@@ -36,10 +70,17 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-inline: 16px;
 
     .section {
       width: 100%;
       max-width: 1170px;
     }
+  }
+
+  .gradient_color {
+    background: linear-gradient(89.83deg, #2563EB 0.11%, #D946EF 58.65%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }
